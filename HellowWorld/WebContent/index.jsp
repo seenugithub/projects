@@ -6,6 +6,6 @@
 <title>Hello World</title>
 </head>
 <body>
-	<h1>Welcome to DevOps World from jenkins</h1>
+	<h1>Welcome to DevOps World from jenkins v2</h1>
 </body>
 </html>
