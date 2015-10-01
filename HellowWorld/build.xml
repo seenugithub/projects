@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="hellowWorld" default="build-war" basedir=".">
-<target name="build-war">
 
 	<property name="web.dir" value="."/>
 	<property name="build.dir" value="build"/>
-   <war destfile="helloworld.war" webxml="${web.dir}/WebContent/WEB-INF/web.xml">
+	
+	<target name="clean">
+		<delete dir="${web.dir}/deploy"/>
+	</target>
+	
+	<target name="build-war" depends="clean">
+
+	
+   <war destfile="${web.dir}/deploy/helloworld.war" webxml="${web.dir}/WebContent/WEB-INF/web.xml">
       <fileset dir="${web.dir}/WebContent">
          <include name="**/*.*"/>
       </fileset>
-      
-      <lib dir="thirdpartyjars">
-         <exclude name="lib/servlet-api.jar"/>
-      </lib>
-      
-      <classes dir="${build.dir}/web"/>
+     
    </war>
    
 </target>
