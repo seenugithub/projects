@@ -2,7 +2,9 @@
 <project name="hellowWorld" default="build-war" basedir=".">
 <target name="build-war">
 
-   <war destfile="helloworld.war" webxml="${web.dir}/web.xml">
+	<property name="web.dir" value="."/>
+	<property name="build.dir" value="build"/>
+   <war destfile="helloworld.war" webxml="${web.dir}/WebContent/WEB-INF/web.xml">
       <fileset dir="${web.dir}/WebContent">
          <include name="**/*.*"/>
       </fileset>
